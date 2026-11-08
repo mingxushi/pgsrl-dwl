@@ -1,0 +1,4 @@
+# Direct runtime dependencies; versions are intentionally not guessed.
+numpy
+torch
+tqdm

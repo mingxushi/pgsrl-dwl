@@ -1,0 +1,86 @@
+{
+  "experiment": {
+    "name": "FR_guidance"
+  },
+  "data": {
+    "input_steps": 12,
+    "stride": 1
+  },
+  "model": {
+    "d_model": 64,
+    "n_heads": 4,
+    "hidden_dim": 128,
+    "latent_layout": "structured",
+    "decoder_mode": "physics",
+    "direct_transition_type": "dlinear",
+    "direct_dlinear_kernel": 3
+  },
+  "guidance": {
+    "enabled": true,
+    "hidden_dim": 128,
+    "output_mode": "direct_anchor_correction",
+    "residual_scale": 0.25,
+    "hard_gate": true,
+    "gate_temperature": 1.0,
+    "gate_loss_type": "balanced_bce",
+    "max_horizon": 19
+  },
+  "decode_branch": {
+    "loss_type": "mae"
+  },
+  "loss": {
+    "lambda_direct": 0.25,
+    "lambda_decode": 2.0,
+    "lambda_raw_decode": 0.1,
+    "lambda_latent_rollout": 1.0,
+    "lambda_consistency": 0.0,
+    "lambda_delta": 0.0,
+    "lambda_guidance_gate": 1.0,
+    "lambda_guidance_anchor": 0.01
+  },
+  "train": {
+    "stage2_epochs": 40,
+    "batch_size": 8,
+    "lr": 0.0005,
+    "direct_lr": 5e-06,
+    "latent_lr": 5e-05,
+    "guidance_lr": 0.0005,
+    "gradient_clip": 1.0,
+    "gradient_clip_mode": "separate",
+    "shuffle": false
+  },
+  "stage2": {
+    "rollout_horizon": 19,
+    "rollout_curriculum": [
+      8,
+      16,
+      19
+    ],
+    "curriculum_epochs": [
+      5,
+      8,
+      27
+    ],
+    "feedback_strategy": "scheduled_sampling",
+    "scheduled_sampling_start": 0.5,
+    "scheduled_sampling_end": 0.1,
+    "scheduled_sampling_schedule": "linear",
+    "rollout_loss_discount": 0.98,
+    "dual_wind_history": true
+  },
+  "direct_branch": {
+    "latent_input_mode": "initial_static",
+    "output_mode": "absolute",
+    "loss_type": "mse"
+  },
+  "selection": {
+    "criterion": "val_long_loop_decode_mae"
+  },
+  "stability": {
+    "delta_quantile": 0.99
+  },
+  "refinement": {
+    "enabled": false,
+    "propagate_refined_latent": false
+  }
+}

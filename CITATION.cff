@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "Unpublished manuscript; confirm metadata before public release."
+title: "Physics-Guided Structured Representation Learning for Doppler Wind Lidar Velocity Prediction"
+type: software
+authors:
+  - family-names: Shi
+    given-names: Mingxu
+  - family-names: Zhao
+    given-names: Haobin
+  - family-names: Xu
+    given-names: Yanrui
+  - family-names: Wang
+    given-names: Ke
+  - family-names: Hu
+    given-names: Liu
+  - family-names: Liu
+    given-names: Biheng
+  - family-names: Hu
+    given-names: Xiaomin
+  - family-names: Liu
+    given-names: Cheng
+  - family-names: Sun
+    given-names: Youwen
+# DOI, publication date, repository URL and software version: pending.
+# Author spelling/order transcribed from supplied PDF; confirm with all authors.

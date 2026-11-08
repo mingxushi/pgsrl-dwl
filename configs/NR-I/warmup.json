@@ -1,0 +1,75 @@
+{
+  "experiment": {
+    "name": "NR-I_warmup"
+  },
+  "data": {
+    "input_steps": 12,
+    "stride": 1
+  },
+  "model": {
+    "d_model": 64,
+    "n_heads": 4,
+    "hidden_dim": 128,
+    "latent_layout": "structured",
+    "decoder_mode": "physics",
+    "direct_transition_type": "dlinear",
+    "direct_dlinear_kernel": 3
+  },
+  "loss": {
+    "lambda_direct": 1.0,
+    "lambda_decode": 2.0,
+    "lambda_latent_rollout": 1.0,
+    "lambda_consistency": 0.1,
+    "lambda_delta": 0.0
+  },
+  "train": {
+    "stage2_epochs": 50,
+    "batch_size": 8,
+    "lr": 0.001,
+    "gradient_clip": 1.0,
+    "gradient_clip_mode": "separate",
+    "shuffle": false
+  },
+  "stage2": {
+    "rollout_horizon": 56,
+    "rollout_curriculum": [
+      4,
+      8,
+      16,
+      32,
+      56
+    ],
+    "curriculum_epochs": [
+      5,
+      7,
+      10,
+      13,
+      15
+    ],
+    "feedback_strategy": "scheduled_sampling",
+    "scheduled_sampling_start": 1.0,
+    "scheduled_sampling_end": 0.1,
+    "scheduled_sampling_schedule": "linear",
+    "rollout_loss_discount": 0.98,
+    "dual_wind_history": true
+  },
+  "direct_branch": {
+    "latent_input_mode": "initial_static",
+    "output_mode": "absolute",
+    "loss_type": "mse"
+  },
+  "decode_branch": {
+    "physics_weight": 0.1
+  },
+  "selection": {
+    "criterion": "val_long_loop_decode_mae"
+  },
+  "stability": {
+    "delta_quantile": 0.99
+  },
+  "refinement": {
+    "enabled": false,
+    "enable_during_training": false,
+    "propagate_refined_latent": false
+  }
+}
