@@ -49,7 +49,7 @@ Use an isolated Python environment with a hardware-appropriate PyTorch installat
 python -m pip install -r requirements.txt
 ```
 
-Core dependencies are PyTorch, NumPy and tqdm. Preparation checks used Python 3.13.9 and PyTorch 2.13.0+cpu; this is not claimed to be the original GPU training environment.
+Core dependencies are PyTorch, NumPy and tqdm. 
 
 ## Data
 
