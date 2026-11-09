@@ -109,6 +109,12 @@ python scripts/predict.py --checkpoint results/paper/NR-II/seed42/selection/NR-I
 
 The output contains denormalized `guided`, `direct` and `physics_decoded` wind profiles, binary gates and predicted latent states. Only load trusted checkpoints. No future label/spectrum is needed for prediction.
 
-## License and citation
+## License and Citation
 
-Software is licensed under **MIT**. Data licensing is separate and remains pending in `data/LICENSE`; software MIT does not automatically apply to observations. Author/title metadata are in `CITATION.cff`; no publication date or DOI is asserted.GitHub large-file documentation: https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github
+The source code in this repository is released under the **MIT License**.
+
+All raw and processed datasets are released under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**. See [`data/LICENSE`](data/LICENSE) for details.
+
+If you use this code or dataset in your research, please cite the associated paper. Citation information is provided in `CITATION.cff`.
+
+A DOI will be added when available.
