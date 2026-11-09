@@ -1,6 +1,40 @@
-DATA LICENSE PENDING SEPARATE OWNER SELECTION
+# Data License
 
-The repository MIT License applies to software, not automatically to raw lidar
-observations, processed arrays or instrument metadata. The owner has requested
-preparation of these data for public release, but has not selected a data license.
-Do not describe the data as MIT-licensed. Finalize data terms before publishing.
+All datasets distributed in this repository, including raw Doppler wind lidar observations and processed datasets, are licensed under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**.
+
+## License
+
+**CC BY 4.0 — Creative Commons Attribution 4.0 International**
+
+https://creativecommons.org/licenses/by/4.0/
+
+Under this license, users are free to:
+
+- Share — copy and redistribute the data in any medium or format.
+- Adapt — remix, transform, and build upon the data for any purpose, including commercial use.
+
+These freedoms are subject to the following condition:
+
+- Attribution — Users must give appropriate credit, provide a link to the license, and indicate whether changes were made.
+
+## Attribution
+
+When using the datasets, please cite the associated research paper:
+
+**Title:** Physics-Guided Structured Representation Learning for Doppler Wind Lidar Velocity Forecasting
+
+**Authors:** See the repository's CITATION.cff file.
+
+**Repository:** https://github.com/mingxushi/pgsrl-dwl
+
+If the associated paper has not yet been formally published, please cite the repository and update the citation information when the paper becomes available.
+
+## Scope
+
+This license applies to all raw and processed datasets distributed in the `data/` directory, including the associated metadata and data manifests.
+
+The software source code is licensed separately under the MIT License specified in the repository's root `LICENSE` file.
+
+## Disclaimer
+
+The dataset is provided "as is", without warranties of any kind, express or implied, to the extent permitted by applicable law.
