@@ -81,8 +81,6 @@ To recompute preprocessing into a fresh location:
 python preprocess.py --input-dir data/raw_bin/NR-I --output-dir data/regenerated/NR-I --max-gates 60 --step-records 360
 ```
 
-Byte-preserving restoration of released processed arrays and recomputation from raw observations are different operations. The parser groups 360 records and computes spectral wind estimates. Exact complete-sweep grouping and the manuscript's manufacturer-derived reference description still require author confirmation. First-record/cache comparisons match NR-I/NR-II exactly; FR has small differences within spectrum 2e-4 and wind 1e-5 absolute tolerances. No exhaustive raw-to-processed regeneration is claimed. Raw filenames preserve original timestamps and auxiliary/transition scan settings; nominal acquisition geometry does not describe every raw filename.
-
 ## Training and evaluation
 
 Run from the repository root after restoring processed arrays:
