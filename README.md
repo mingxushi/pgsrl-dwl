@@ -61,7 +61,7 @@ Core dependencies are PyTorch, NumPy and tqdm. Preparation checks used Python 3.
 
 All sequences use 60 range gates and 100 spectral bins, with chronological 70/15/15 splitting and training-only normalization. Each sequence NPZ contains `spectra[T,60,100]`, `wind_speed[T,60]`, `step_indices`, `split_name` and acquisition metadata. The original near-range folder labels were reversed relative to the paper; this release uses acquisition dates/counts to label NR-I and NR-II correctly.
 
-The payload includes 421,896 original `.bin` files and 21 original processed NPZ/JSON files, including record-level caches, split arrays, normalizers and preprocessing metadata. There are 425 binary artifacts totaling 21,631,534,594 bytes (about 21.63 GB), tracked through **Git LFS**. The processed parts are no larger than 32 MiB. Ordinary GitHub browser upload is not suitable for this payload.
+The payload includes 421,896 original `.bin` files and 21 original processed NPZ/JSON files, including record-level caches, split arrays, normalizers and preprocessing metadata. There are 425 binary artifacts totaling 21,631,534,594 bytes (about 21.63 GB).
 
 Clone the repository and retrieve the data through Git LFS:
 
