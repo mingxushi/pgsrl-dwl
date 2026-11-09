@@ -114,6 +114,4 @@ The output contains denormalized `guided`, `direct` and `physics_decoded` wind p
 
 ## License and citation
 
-Software is licensed under **MIT**. Data licensing is separate and remains pending in `data/LICENSE`; software MIT does not automatically apply to observations. Author/title metadata are in `CITATION.cff`; no publication date or DOI is asserted.
-
-`.gitattributes` tracks raw ZIPs and processed parts with Git LFS. Restored duplicate arrays and generated outputs are ignored. Git LFS storage/bandwidth limits may affect retrieval of the full payload. GitHub large-file documentation: https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github
+Software is licensed under **MIT**. Data licensing is separate and remains pending in `data/LICENSE`; software MIT does not automatically apply to observations. Author/title metadata are in `CITATION.cff`; no publication date or DOI is asserted.GitHub large-file documentation: https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github
