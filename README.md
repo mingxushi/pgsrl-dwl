@@ -97,7 +97,7 @@ The workflow runs 10 epochs of Stage 1, 50 epochs of dynamics warm-up, then 40 e
 
 Best checkpoints are selected on validation only, followed by a frozen full-loop test. Test trajectories contain 57/65/20 predictions after the initial 12 observations; these differ from the curriculum maxima. Results are saved under `results/paper/<dataset>/seed<seed>/frozen_test/`, including `metrics.json`, `test_predictions.npz`, `test_horizon_mae.csv` and `test_state_drift.csv`.
 
-Scores are denormalized MAE/RMSE/R2 over the full trajectory, aggregated over the five seeds. Historical output keys `decode`/`refined` denote guided/final outputs in the paper configuration, whereas `raw_decode` is the auxiliary physics-decoded branch and `direct` the anchor. Optional optimization-based refinement is disabled. The rollout uses valid-sample-weighted horizon discounting; the manuscript's two discount formulas require clarification when valid counts differ.
+Scores are MAE/RMSE/R2 over the full trajectory, aggregated over the five seeds. Historical output keys `decode`/`refined` denote guided/final outputs in the paper configuration, whereas `raw_decode` is the auxiliary physics-decoded branch and `direct` the anchor.
 
 ## Future prediction
 
