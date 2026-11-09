@@ -112,12 +112,6 @@ python scripts/predict.py --checkpoint results/paper/NR-II/seed42/selection/NR-I
 
 The output contains denormalized `guided`, `direct` and `physics_decoded` wind profiles, binary gates and predicted latent states. Only load trusted checkpoints. No future label/spectrum is needed for prediction.
 
-## Verification and release status
-
-After cleanup and renaming, all 37 rollout/inference tests passed again, and all seven CLI entry points passed their help checks. All data artifacts and reconstructed data paths remain present; their hashes and all 21 restored processed files were verified during data preparation. Record-level caches were subsequently repackaged into 32 MiB shards for reliable transfer; each reconstructed cache retains its original full-file SHA-256 hash. AST comparisons confirm that the core numerical class/function definitions are preserved after import-name normalization; edits reorganize names, imports and paths. Full multi-seed GPU training was not repeated. Removing baseline implementations means this repository is scoped to the proposed method and data, not independent reproduction of every comparison row.
-
-Before citing a final public release, resolve the reference-target source and acquisition screening/geometry wording above, confirm the manuscript's Latent Only/Physics Only naming if retaining those claims, and replace the placeholder availability link with a real public repository/version. Exact provenance of all reported statistical tables is not certified by packaging checks. The manuscript itself has not been edited.
-
 ## License and citation
 
 Software is licensed under **MIT**. Data licensing is separate and remains pending in `data/LICENSE`; software MIT does not automatically apply to observations. Author/title metadata are in `CITATION.cff`; no publication date or DOI is asserted.
