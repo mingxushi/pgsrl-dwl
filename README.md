@@ -59,7 +59,7 @@ Core dependencies are PyTorch, NumPy and tqdm.
 | NR-II | 2025-08-15 to 2025-08-22 | 183,410 | 509 | 356 / 76 / 77 |
 | FR | 2025-07-19 to 2025-07-22 | 74,795 | 207 | 144 / 31 / 32 |
 
-All sequences use 60 range gates and 100 spectral bins, with chronological 70/15/15 splitting and training-only normalization. Each sequence NPZ contains `spectra[T,60,100]`, `wind_speed[T,60]`, `step_indices`, `split_name` and acquisition metadata. The original near-range folder labels were reversed relative to the paper; this release uses acquisition dates/counts to label NR-I and NR-II correctly.
+All sequences use 60 range gates and 100 spectral bins, with chronological 70/15/15 splitting and training-only normalization. Each sequence NPZ contains `spectra[T,60,100]`, `wind_speed[T,60]`, `step_indices`, `split_name` and acquisition metadata.
 
 The payload includes 421,896 original `.bin` files and 21 original processed NPZ/JSON files, including record-level caches, split arrays, normalizers and preprocessing metadata. There are 425 binary artifacts totaling 21,631,534,594 bytes (about 21.63 GB).
 
