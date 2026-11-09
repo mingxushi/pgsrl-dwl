@@ -40,7 +40,6 @@ LICENSE                   MIT software license
 CITATION.cff
 ```
 
-Internal development labels have been removed from filenames. Older local V2 referred to the original rollout implementation, which continued evolving; V4 referred to dynamics warm-up, and V5 to reliability-guided fine-tuning. These were development labels, not three methods in the paper. The current names describe their actual roles.
 
 ## Installation
 
